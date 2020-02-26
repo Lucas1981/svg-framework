@@ -25,10 +25,12 @@ export default class Planet {
 
   initiate() {
     this.representation
+      .attr('class', 'planet')
       .attr('cx', this.x)
       .attr('cy', this.y)
       .attr('r', this.r)
-      .attr('fill', this.color);
+      .attr('fill', this.color)
+      .on('click', () => console.log('Intergalactic planetary'));
   }
 
   update() {

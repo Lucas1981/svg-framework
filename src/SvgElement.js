@@ -31,4 +31,14 @@ export default class SvgElement {
     this.element.removeChild(child);
     return this;
   }
+
+  on(event, fn) {
+    this.element.addEventListener(event, fn);
+    return this;
+  }
+
+  off(event, fn) {
+    this.element.removeEventListener(event, fn);
+    return this;
+  }
 };
